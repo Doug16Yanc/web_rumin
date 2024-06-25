@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rumin Web/Dashboard</title>
+    <link rel="stylesheet" href="../style.css">
+    <script defer src="../javascript/script.js"></script>
+    <script defer src="../javascript/chart.js"></script>
+    <label defer src="../javascript/label.js"></label>
+    <script defer src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/react@17/umd/react.production.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/react-dom@17/umd/react-dom.production.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dash-core-components@2/dash_core_components.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dash@2/dist/dash.min.js"></script>
+</head>
+<body>
+    <div class="header">
+        <a href="#" class="logo">Rumin Web</a>
+        <i class="fa-solid fa-bars" id="menu-icons"></i>
+        <div class="navbar" id="navbar">
+            <a href="../pages/perfil.html">Perfil</a>
+            <a href="../pages/propriedade.html">Propriedades</a>
+            <a href="../pages/rebanho.html">Rebanho</a>
+            <a href="../pages/animal.html">Animais</a href>
+            <a href="#">Estatísticas</a>
+            <a href="../index.html">Sair</a>
+        </div>
+    </div>
+    <div class="dash-graphics" height="200">
+        <canvas id="myChart" width="400" height="250"></canvas>
+    </div>
+    <div class="footer">
+    <div class="author">
+    <div class="copyright">
+        <img src="../images/cidts.jpeg" alt=""/> 
+        <img src="../images/ifce.png" alt=""/>
+        </div>
+        <div class="text">
+        All Right Reserved
+        </div>
+    </div>
+    </div>
+</body>
+</html>
