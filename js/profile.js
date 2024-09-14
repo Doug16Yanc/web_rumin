@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const userEmail = sessionStorage.getItem('userEmail');
     async function fetchPropriedadeData() {
         try {
-            const response = await fetch('http://0.0.0.0:8080/user/' + userEmail);
+            const response = await fetch('http://localhost:8080/user/' + userEmail);
             const data = await response.json();
             console.log(data);
 

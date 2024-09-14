@@ -4,7 +4,7 @@ async function fetchAnimals() {
 
     try {
         const response = await fetch(
-            `http://0.0.0.0:8080/user/${userEmail}/animals`,
+            `http://localhost:8080/user/${userEmail}/animals`,
             {
                 headers: {
                     Authorization: "Bearer " + token,
