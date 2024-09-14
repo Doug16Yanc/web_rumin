@@ -1,45 +1,108 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rumin Web/Dashboard</title>
-    <link rel="stylesheet" href="../style.css">
-    <script defer src="../javascript/script.js"></script>
-    <script defer src="../javascript/chart.js"></script>
-    <label defer src="../javascript/label.js"></label>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gráficos de Animais</title>
+    <link rel="stylesheet" href="../style.css" />
+
+    <link rel="stylesheet" href="../css/chart.css" />
     <script defer src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/react@17/umd/react.production.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/react-dom@17/umd/react-dom.production.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/dash-core-components@2/dash_core_components.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/dash@2/dist/dash.min.js"></script>
-</head>
-<body>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"
+    ></script>
+
+    <script defer type="module" src="../js/chart.js"></script>
+  </head>
+  <body>
     <div class="header">
-        <a href="#" class="logo">Rumin Web</a>
-        <i class="fa-solid fa-bars" id="menu-icons"></i>
-        <div class="navbar" id="navbar">
-            <a href="../pages/perfil.html">Perfil</a>
-            <a href="../pages/propriedade.html">Propriedades</a>
-            <a href="../pages/rebanho.html">Rebanho</a>
-            <a href="../pages/animal.html">Animais</a href>
-            <a href="#">Estatísticas</a>
-            <a href="../index.html">Sair</a>
+      <a href="profile.html" class="logo">Rumin Web - Estatísticas</a>
+      <i class="fa-solid fa-bars" id="menu-icons"></i>
+      <div class="navbar" id="navbar">
+        <a href="../pages/profile.html">Perfil</a>
+        <a href="../pages/property.html">Propriedades</a>
+        <a href="../pages/flock.html">Rebanho</a>
+        <a href="#">Estatísticas</a>
+        <a href="../index.html">Sair</a>
+      </div>
+    </div>
+
+    <!-- Seção com os botões das propriedades -->
+    <section class="main">
+      <h1 class="title">
+        Selecione uma propriedade para ver suas estatísticas
+      </h1>
+      <div id="propertiesButtons"></div>
+      <!-- Botões das propriedades serão inseridos aqui -->
+
+      <div
+        id="totalAnimals"
+        style="
+          font-size: 20px;
+          margin-bottom: 20px;
+          margin-top: 20px;
+          font-weight: bold;
+        "
+      ></div>
+      <div id="loadingSpinner" class="loading-spinner hidden"></div>
+        <div class="spinner hidden"></div>
+      </div>
+      <div class="hidden-visible-charts">
+        <!-- Gráficos serão exibidos após selecionar uma propriedade -->
+        <h3 class="titleCategories">Quantidade por Categoria</h3>
+        <div class="chart-container">
+          <div class="chart-header">
+            <div class="chart-buttons">
+              <button class="btnBar">Bar</button>
+              <button class="btnPie">Pie</button>
+              <button class="btnLine">Line</button>
+            </div>
+            <div class="chart-legend" id="categoryChartLegend"></div>
+          </div>
+          <canvas id="categoryChart" width="400" height="400"></canvas>
         </div>
-    </div>
-    <div class="dash-graphics" height="200">
-        <canvas id="myChart" width="400" height="250"></canvas>
-    </div>
+  
+        <h3 class="titleCategories">Quantidade por Raça</h3>
+        <div class="chart-container">
+          <div class="chart-header">
+            <div class="chart-buttons">
+              <button class="btnBar">Bar</button>
+              <button class="btnPie">Pie</button>
+              <button class="btnLine">Line</button>
+            </div>
+            <div class="chart-legend" id="breedChartLegend"></div>
+          </div>
+          <canvas id="breedChart" width="400" height="400"></canvas>
+        </div>
+  
+        <h3 class="titleCategories">Quantidade por Sexo</h3>
+        <div class="chart-container">
+          <div class="chart-header">
+            <div class="chart-buttons">
+              <button class="btnBar">Bar</button>
+              <button class="btnPie">Pie</button>
+              <button class="btnLine">Line</button>
+            </div>
+            <div class="chart-legend" id="genderChartLegend"></div>
+          </div>
+          <canvas id="genderChart" width="400" height="400"></canvas>
+        </div>
+
+      </div>
+
+    </section>
+
     <div class="footer">
-    <div class="author">
-    <div class="copyright">
-        <img src="../images/cidts.jpeg" alt=""/> 
-        <img src="../images/ifce.png" alt=""/>
+      <div class="author">
+        <div class="copyright">
+          <img src="../images/cidts.jpeg" alt="" />
+          <img src="../images/ifce.png" alt="" />
         </div>
         <div class="text">
-        All Right Reserved
+          All Right Reserved
         </div>
+      </div>
     </div>
-    </div>
-</body>
+  </body>
 </html>
